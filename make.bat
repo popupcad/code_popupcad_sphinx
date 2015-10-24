@@ -6,7 +6,7 @@ if "%SPHINXBUILD%" == "" (
 	set SPHINXBUILD=sphinx-build
 )
 REM set BUILDDIR=build
-set BUILDDIR="C:\Users\danaukes\Documents\websites\popupcad-api"
+set BUILDDIR="C:\Users\danaukes\Documents\websites\popupcad_api"
 set ALLSPHINXOPTS=-d %BUILDDIR%/doctrees %SPHINXOPTS% source
 set I18NSPHINXOPTS=%SPHINXOPTS% source
 if NOT "%PAPER%" == "" (
