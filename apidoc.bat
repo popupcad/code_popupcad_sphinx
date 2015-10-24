@@ -1,0 +1,5 @@
+sphinx-apidoc -f -o "source\popupcad" "C:\Users\danaukes\Documents\code\popupcad\popupcad"
+REM sphinx-apidoc -f -o "source\popupcad_gazebo" "C:\Users\danaukes\Documents\code\popupcad\popupcad_gazebo"
+sphinx-apidoc -f -o "source\popupcad_manufacturing_plugins" "C:\Users\danaukes\Documents\code\popupcad\popupcad_manufacturing_plugins"
+sphinx-apidoc -f -o "source\api_examples" "C:\Users\danaukes\Documents\code\popupcad\api_examples"
+sphinx-apidoc -f -o "source\dev_tools" "C:\Users\danaukes\Documents\code\popupcad\dev_tools"
