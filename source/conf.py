@@ -121,8 +121,7 @@ todo_include_todos = False
 html_theme = 'alabaster'
 #html_theme = 'sphinxdoc'
 
-from better import better_theme_path
-html_theme_path = [better_theme_path]
+html_theme_path = ['../sphinx-better-theme']
 html_theme = 'better'
 
 # Theme options are theme-specific and customize the look and feel of a theme

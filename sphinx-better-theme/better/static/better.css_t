@@ -1,0 +1,421 @@
+@import url("better_basic.css");
+
+{% set theme_headtextcolor = theme_headtextcolor or theme_textcolor %}
+{% set theme_footertextcolor = theme_footertextcolor or theme_textcolor %}
+
+/* main styles */
+
+body {
+
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    color: {{ theme_textcolor }};
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+/*    line-height: 135%;*/
+}
+
+a:link,a:visited{
+    color:#f59393;
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+    color:#f27c7c;
+}
+.header_inner{
+    max-width: 60rem;
+    height:100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.sphinxsidebarwrapper{
+    text-align: right;
+}
+
+ul.horizontal {
+    padding-top:1.4rem;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: .06rem;
+
+    }
+ul.horizontal li:first-child {
+    float: left;
+    margin-left: 0;
+}
+ul.horizontal li{
+    display: block;
+    float:right;
+    margin-left:2em;
+}
+ul.horizontal li a:hover{
+    color:#f27c7c;
+}
+
+#logo{
+    display: block;
+    background: url("http://www.popupcad.org/assets/images/popupcad-logo.png") no-repeat;
+    width: 150px;
+    height: 36px;
+    margin-top: -8px;
+    text-indent: -900em;
+}
+.header_inner h1{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 2em;
+    font-weight: 300;
+    margin-top:.2em;
+    margin-left:12.2em;
+        /*opacity: 0.4;*/
+}
+#pageheader h1 a:link,#pageheader h1 a:visited{
+    color: #f59393;
+    margin-top:2em;
+}
+#pageheader h1 a:hover{
+    color:#f27c7c;
+}
+.header_inner a:link,.header-inner a:visited{
+    color:#da9090;
+}
+
+.header_inner h1 a:link,.header_inner h1 a:visited,.header_inner h1 a:link:hover,.header_inner h1 a:link:visited{
+    font-size: 2em;
+    font-weight: 300;
+    color: #fff;
+}
+
+
+
+
+a.toc-backref {
+    color: {{ theme_headtextcolor }};
+}
+
+p {
+    margin: 1rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+    color: {{ theme_headtextcolor }};
+    line-height: 135%;
+}
+
+/*
+.body .section:first-child > :first-child,
+.sphinxsidebarwrapper > :first-child,
+.sphinxsidebar .search:first-child
+{
+    margin-top: 1rem;
+}
+*/
+
+h1 { font-size: 1.5rem; font-weight: bold; }
+h2 { font-size: 1.5rem; font-weight: normal; }
+h3 { font-size: 1.25rem; font-weight: bold; }
+h4 { font-size: 1.25rem; font-weight: normal; }
+h5 { font-size: 1rem; font-weight: bold; }
+h6 { font-size: 1rem; font-weight: normal; }
+
+/* page-level layout of containers */
+
+header#pageheader {
+    height:290px;
+    background: #4d4d52;
+    margin-bottom:3em;
+}
+
+-header#pageheader, footer#pagefooter, .related, .document {
+    width: 100%;
+    max-width: 60rem;
+    margin: auto;
+}
+
+.documentwrapper {
+    float: left;
+    width: 100%;
+}
+
+.bodywrapper {
+    {% if theme_rightsidebar|tobool -%}
+    margin: 0 {{ theme_sidebarwidth }} 0 0;
+    {%- else -%}
+    margin: 0 0 0 {{ theme_sidebarwidth }};
+    {%- endif %}
+}
+
+footer#pagefooter, footer#pagefooter a {
+
+    color: {{ theme_footertextcolor }};
+}
+
+
+footer#pagefooter {
+    margin:0;
+    background:#eee;
+    margin-top:3em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    text-align: center;
+    max-width:100%;
+}
+
+footer#pagefooter a {
+
+}
+
+/* header styles */
+
+body > header h1 a, body > header h1 a:visited {
+    color: {{ theme_headtextcolor }};
+}
+
+a.headerlink {
+    font-size: 0.8em;
+    padding: 0 4px 0 4px;
+    text-decoration: none;
+}
+
+/* code styles */
+
+pre, tt {
+    background-color: #eee;
+    color: #333;
+}
+
+pre {
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+    margin: 1rem -5px;
+    padding: 5px;
+    border-left: none;
+    border-right: none;
+    font-size: 0.8rem;
+    line-height: 1rem;
+}
+
+tt {
+    padding: 0 1px 0 1px;
+    font-family: Consolas, Monaco, monospace;
+}
+
+/* API doc styles */
+
+dl.function,
+dl.class,
+dl.method,
+dl.attribute,
+dl.data,
+dl.classmethod {
+    margin-bottom: 2rem;
+}
+
+/* relbar */
+
+.related {
+    line-height: 30px;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.related.top {
+    border-bottom: 1px solid #aaa;
+}
+
+.related.bottom {
+    border-top: 1px solid #aaa;
+}
+
+.related ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.related li {
+    display: inline;
+}
+
+nav#rellinks {
+    float: right;
+}
+
+nav#rellinks li+li:before {
+    content: "|";
+}
+
+nav#breadcrumbs li+li:before {
+    content: "\00BB";
+}
+
+/* sidebar */
+
+.sphinxsidebarwrapper {
+    padding: 0 2rem 0 0;
+}
+
+
+.sphinxsidebar {
+    width: {{ theme_sidebarwidth }};
+    margin-left: -100%;
+
+    {%- if theme_rightsidebar|tobool %}
+    float: right;
+    {%- else %}
+    float: left;
+    {%- endif %}
+}
+.sphinxsidebar h3{
+  margin-top:.4em;
+
+}
+.sphinxsidebar h3 a {
+    font-size:.6em;
+    color: #ccc;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.sphinxsidebar p.topless {
+    margin: 5px 10px 10px 10px;
+}
+
+.sphinxsidebar ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+    list-style: none;
+}
+/*
+.sphinxsidebar ul ul,
+.sphinxsidebar ul.want-points {
+    margin-left: 20px;
+    list-style: square;
+}
+*/
+.sphinxsidebar ul ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sphinxsidebar input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height: 1.5rem;
+    font-size: 0.9rem;
+    margin: 0;
+
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #555;
+}
+
+.sphinxsidebar .search {
+    margin-top: 2rem;
+}
+
+.sphinxsidebar .search input[type=text] {
+    {#- width: calc({{ theme_sidebarwidth }} - 5rem); #}
+    {#- width: -webkit-calc({{ theme_sidebarwidth }} - 5rem); #}
+    width: 90%;
+    display: inline-block;
+}
+
+.sphinxsidebar .search input[type=submit] {
+    width: 4rem;
+    display: inline-block;
+}
+
+/* paragraph-level markup */
+
+.admonition p.admonition-title + p {
+    display: inline;
+}
+
+.admonition p {
+    margin-bottom: 5px;
+}
+
+.admonition pre {
+    margin-bottom: 5px;
+}
+
+.admonition ul, .admonition ol {
+    margin-bottom: 5px;
+}
+
+p.admonition-title {
+    display: inline;
+    margin-right: 0;
+}
+
+p.admonition-title:after {
+    content: ":";
+}
+
+.note {
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+.seealso {
+    background-color: #ffc;
+    border: 1px solid #ff6;
+}
+
+.topic {
+    background-color: #eee;
+}
+
+.warning {
+    background-color: #ffe4e4;
+    border: 1px solid #f66;
+}
+
+.warning tt {
+    background: #efc2c2;
+}
+
+.note tt {
+    background: #d6d6d6;
+}
+
+.viewcode-block:target {
+    background-color: #f4debf;
+    border-top: 1px solid #ac9;
+    border-bottom: 1px solid #ac9;
+}
+
+/* responsive styles */
+
+@media (max-width: 820px) {
+    /* kill the sidebar */
+    .bodywrapper { margin: 0; }
+    .sphinxsidebar {
+        display: none;
+    }
+     footer#pagefooter, .related, .document {
+        margin: 0 1rem;
+        width: calc(100% - 2rem);
+        width: -webkit-calc(100% - 2rem);
+    }
+    .header_inner h1{
+        margin-left:1em;
+  }
+}
