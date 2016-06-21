@@ -11,8 +11,12 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+    <popupcad/modules.rst>
+    <popupcad_manufacturing_plugins/modules.rst>
+    <api_examples/modules.rst>
+    <dev_tools/modules.rst>
 
-
+     
 Indices and tables
 ==================
 
